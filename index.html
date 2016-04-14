@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vue Pagination</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        .pagination-bar span {
+            float: left;
+            line-height: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row" id="app">
+        <div class="col-sm-6 col-sm-offset-3">
+            <button type="button" class="btn btn-default" @click="refresh">Refresh</button>
+            <ul>
+                <li v-for="e in list">{{e}}</li>
+            </ul>
+            <pagination @params="getData"></pagination>
+        </div>
+    </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="pagination.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
